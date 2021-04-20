@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    Font-size: 14px;
+    color:hsl(0, 0%, 100%);
+}
+/* START GLOBAL RULES */
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* END GLOBAL RULES */
+body{
+    background-color: hsl(218, 28%, 13%);
+}
+.container{
+    position: relative;
+}
+/* START BACK */
+.back-desktop{
+    display: flex;
+    align-items: flex-end;
+    background-color: hsl(217, 28%, 15%);
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+}
+.back-desktop img{
+    max-width: 100%;
+}
+.back-mobile{
+    display: flex;
+    align-items: flex-end;
+    background-color:hsl(217, 28%, 15%);
+    position: absolute;
+    bottom: 85%;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+    display: none;
+}
+.back-mobile img{
+    max-width: 100%;
+}
+/* END BACK */
+/* START NAV */
+nav{
+    font-family: Raleway;
+    display: flex;
+    height: 52px;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    margin-right: 10px;
+    display: inline-block;
+}
+nav .menu{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+nav .menu li{
+    display: inline-block;
+}
+/* END NAV */
+/* START HEADER */
+header{
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+    font-family: Raleway;
+}
+header h1{
+    line-height: 40px;
+    word-spacing: 13px;
+    margin: 30px 0 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+header p{
+    margin: 0 auto;
+    max-width: 60%;
+    line-height: 30px;
+}
+header .get-started{
+    font-weight: 700;
+    border-radius: 26px;
+    background-color: #59d4d8;
+    border: none;
+    padding: 18px;
+    width: 40%;
+    margin: 20px 0;
+}
+/* END HEADERR */
+/* START CARD */
+.card{
+    text-align: center;
+    display: grid;
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+    grid-template-columns:repeat(2,300px);
+    grid-template-rows: repeat(2,250px);
+    margin: 80px auto;
+    width: 700px;
+    font-family: Open Sans;
+}
+.card div{
+    margin: 20px;
+}
+/* END CARD */
+
+/* START SERVICES */
+.services{
+    display: grid;
+    grid-template-columns: repeat(2,450px);
+    grid-template-rows: 347px;
+    grid-gap: 40px;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: Open Sans;
+}
+.services .disc h1{
+    font-size: 35px;
+    max-width: 70%;
+    margin: 30px 0;
+}.services .disc p{
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.services .disc a{
+    color: #59d4d8;
+    text-decoration: none;
+    border-bottom:2px solid #59d4d8 ;
+}
+.services .imag img{
+    width: 450px;
+}
+/* END SERVICES */
+
+/* START TWITTER */
+.twitter{
+    font-family: Open Sans;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: 200px;
+    grid-gap: 30px;
+    max-width: 960px;
+    margin: 130px auto;
+}
+.twitter .acc{
+    position: relative;
+    width: 300px;
+    background-color: hsl(217, 28%, 15%);
+}
+.twitter .acc .quotes{
+    position: absolute;
+    top:-30px;
+    left: -10px;
+    z-index: -1;
+}
+.twitter .acc .marg{
+    margin: 30px 20px ;
+}
+.twitter .acc .marg img{
+    border-radius: 50%;
+    position: absolute;
+    width: 35px;
+    bottom: 23px;
+}
+.twitter .marg p{   
+    margin-bottom: 15px;
+}
+.twitter h5, .last{
+    margin-left: 45px;
+}
+.twitter .acc .last {
+    font-size: 10px;
+    opacity: 40%;
+}
+/* END TWITTER */
+/* START PHONE */
+@media only screen and (max-width: 978px){
+    /* START TWITTER */
+    .twitter{
+        max-width: 630px;
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows: repeat(2,200px);
+    }
+    /* END TWITTER */
+    /* START BACK */
+    .back-desktop{
+        bottom: 67%;
+    }
+    /* END BACK */
+    /* START SERVICES */
+    .services{
+        grid-template-columns: 445px;
+        grid-template-rows: repeat(2,347px);
+        max-width: 445px;
+    }
+    .services .disc{
+        text-align: center;
+    }
+    .services .disc h1{
+        margin: 30px auto;
+    }
+    .services .imag{
+        width: 445px;
+    }
+        /* END SERVICES */
+}
+@media only screen and (max-width: 766px) {
+    /* START .FOOTER */
+    hr{
+        width: 100%;
+    }
+    .footer{
+        align-items:baseline;
+        flex-direction: column;
+        column-gap: 100px;
+    }
+    .footer div{
+        width: 90% ;
+    }
+    .footer div p{
+        min-width: 80%;
+    }
+    /* END .FOOTER */
+    /* START SEARCH */
+    .search {
+        max-width: 95%;
+    }
+    /* END SEARCH */
+      /* START TWITTER */
+      .twitter{
+        max-width: 300px;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(3,200px);
+    }
+    /* END TWITTER */
+        /* START BACK */
+        .back-desktop{
+            bottom: 81%;
+        }
+        /* END BACK */
+    /* START NAV */
+    nav .logo img{
+            margin-right: 40px;
+            width: 110px;
+        }
+        nav .menu{
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
+        nav .menu{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+        /* END NAV */
+        /* START HEADER */
+        header{
+            max-width: 440px;
+        }
+        header img{
+            width: 440px;
+        }
+        header h1{
+            max-width: 440px;
+        }
+        .card{
+            width: 90%;
+            grid-row-gap: auto;
+            grid-column-gap: 0;
+            grid-template-columns:100%;
+            grid-template-rows: repeat(4,250px);
+        }
+        /* END HEADER */
+}
+@media only screen and (max-width: 474px){
+    /* START BACK */
+    .back-desktop{
+        display: none;
+    }
+    .back-mobile{
+        display: flex;
+    }
+    /* END BACK */
+    /* START NAV */
+    nav{
+        margin: 40px 15px;
+    }
+    nav .menu{
+        width: 220px;
+    }
+        /* END NAV */
+        /* START HEADER */
+    header{
+            max-width: 340px;
+        }
+    header img{
+            max-width: inherit;
+        }
+     header h1{
+            max-width: inherit;
+        }
+    header p{
+            width:100%;
+        }
+    header .get-started{
+            width: 250px !important;
+        }
+        /* END HEADER */
+            /* START SERVICES */
+    .services{
+        grid-template-columns: 360px;
+        grid-gap: 0;
+        grid-template-rows: repeat(2,347px);
+        max-width: 360px;
+    }
+    .services .disc{
+        text-align: center;
+    }
+    .services .disc h1{
+        max-width: 90%;
+        margin: 30px auto;
+    }
+    .services .imag{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .services .imag img{
+        max-width: 360px;
+    }
+        /* END SERVICES */
+}
+/* END PHONE */
+/* START SEARCH */
+.search{
+    padding: 20px 0;
+    border-radius: 20px;
+    font-family: Open Sans;
+    background-color: hsl(217, 28%, 15%);
+    min-height: 290px;
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.search h1{
+    font-size: 30px;
+}
+.search p{
+    max-width: 70%;
+}
+.search input{
+    margin:20px 0;
+    text-align: center;
+    border:none;
+    border-radius: 20px;
+    outline: none;
+    width: 300px;
+    height: 40px;
+}
+.search button{
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #59d4d8;
+}
+/* END SEARCH */
+/* START .FOOTER */
+.footer .ligo{
+    margin-left: 0;
+}
+.footer{
+    margin:50px 0 0; 
+    padding: 50px;
+    background-color: hsl(216, 53%, 9%);
+    font-family:Open Sans; 
+    justify-content: space-around;
+    display: flex;
+    min-height: 200px;
+    width: 100%;
+}
+.footer .eyh{
+    line-height: 30px;
+}
+.footer div{
+    margin-left: 50px;
+    line-height: 40px;
+    max-width: 20%;
+}
+.logos img{
+    width: 30px;
+}
+/* END .FOOTER */
